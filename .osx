@@ -13,10 +13,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "tpe-book"
-sudo scutil --set HostName "tpe-book"
-sudo scutil --set LocalHostName "tpe-book"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "tpe-book"
+sudo scutil --set ComputerName "mac"
+sudo scutil --set HostName "mac"
+sudo scutil --set LocalHostName "mac"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "mac"
 
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
@@ -83,9 +83,9 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ###############################################################################
 
 # Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+#defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+#defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: map bottom right corner to right-click
 #defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
@@ -104,8 +104,8 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Enable access for assistive devices
-echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled > /dev/null 2>&1
-sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
+#echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled > /dev/null 2>&1
+#sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
 # TODO: avoid GUI password prompt somehow (http://apple.stackexchange.com/q/60476/4408)
 #sudo osascript -e 'tell application "System Events" to set UI elements enabled to true'
 
@@ -386,15 +386,15 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 ###############################################################################
 
 # Allow installing user scripts via GitHub or Userscripts.org
-defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
-defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
+#defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
+#defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 
 ###############################################################################
 # iTunes															                                        #
 ###############################################################################
 
 # Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 ###############################################################################
 # Kill affected applications                                                  #

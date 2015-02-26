@@ -1,5 +1,5 @@
 # Use (git) hub
-alias git=hub
+# alias git=hub
 
 # Easier navigation:
 alias ..="cd .."
@@ -8,11 +8,9 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # Shortcuts
-alias db="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dev="cd ~/dev"
 alias work="cd ~/dev/work"
-alias talks="cd ~/Dropbox/talks/"
 alias g="git"
 alias v="vim"
 
