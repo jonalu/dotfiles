@@ -114,7 +114,7 @@ filetype indent on
 call pathogen#infect()
 
 " Load color scheme
-color wombat256mod
+" color wombat256mod
 " Make comments darker
 hi Comment ctermfg=235
 
